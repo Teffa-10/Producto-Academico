@@ -6,7 +6,6 @@
     <title>Blog de un estudiante de Ingenieria de Sistemas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Animaciones */
         .fade-in {
             animation: fadeIn 1s ease-in-out;
         }
@@ -17,15 +16,13 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-    <!-- ENCABEZADO -->
     <header class="bg-blue-600 dark:bg-blue-800 text-white text-center p-6 shadow-lg">
         <h1 class="text-4xl font-bold">Blog de un alumno de Ingenieria de Sistemas</h1>
         <p class="text-lg mt-2">Innovación, desarrollo y tecnología al alcance de todos.</p>
     </header>
 
     <div class="max-w-4xl mx-auto mt-8 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg fade-in">
-        
-        <!-- SECCIÓN DE PRESENTACIÓN -->
+
         <section class="text-center">
             <img src="https://via.placeholder.com/150" alt="Foto del alumno" class="rounded-full mx-auto mb-4 border-4 border-blue-500 dark:border-blue-300">
             <h2 class="text-3xl font-semibold">Hola, soy Meayck Rudloff Paredes Gutierrez 👨‍💻</h2>
@@ -40,7 +37,6 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE HABILIDADES -->
         <section class="mt-8">
             <h3 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2">💡 Habilidades principales</h3>
             <div class="grid grid-cols-2 gap-4 mt-4 text-center">
@@ -51,7 +47,6 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE ARTÍCULOS -->
         <section class="mt-8">
             <h3 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2">📌 Últimos artículos</h3>
             <ul class="mt-4 space-y-4">
@@ -67,7 +62,42 @@
             </ul>
         </section>
 
-        <!-- SECCIÓN DE CONTACTO -->
+        <!-- NUEVO: SECCIÓN DE STEFANY YADIRA -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-semibold text-center">🌸 Blog de Stefany Yadira 🌸</h2>
+            <div class="mt-6">
+                <h3 class="text-2xl font-bold mb-2">Sobre mí</h3>
+                <p>Hola, soy Stefany Yadira, amante de los gatos, las manualidades, la repostería y todo lo que brille.
+                   Me encanta crear, soñar y compartir lo que hago con mucho amor 💕.</p>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-2xl font-bold mb-2">Mis pasatiempos favoritos</h3>
+                <ul class="list-disc list-inside">
+                    <li>🎨 Hacer flores gigantes y alas de hadas.</li>
+                    <li>🧁 Cocinar postres ricos y creativos</li>
+                    <li>📸 Decorar y tomar fotos para redes</li>
+                    <li>🐱 Cuidar de mi gatito Filimón</li>
+                </ul>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-2xl font-bold mb-2">Mis creaciones favoritas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <img src="flor1.jpg" alt="Flor gigante" class="rounded shadow">
+                    <img src="ala1.jpg" alt="Alas de hada" class="rounded shadow">
+                    <img src="pastel.jpg" alt="Pastel decorado" class="rounded shadow">
+                </div>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-2xl font-bold mb-2">¡Conéctate conmigo!</h3>
+                <p>Si quieres saber más de mí o trabajar juntas en algo bonito, escríbeme:</p>
+                <ul class="list-disc list-inside">
+                    <li>Email: stefany.yadira@gmail.com</li>
+                    <li>Instagram: <a href="https://instagram.com/stefanycreativa" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">@stefanycreativa</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO FINAL -->
         <section class="mt-8 text-center">
             <h3 class="text-2xl font-semibold mb-4">🌍 Conéctate conmigo asdadadasdasdas </h3>
             <div class="flex justify-center space-x-6">
@@ -78,13 +108,11 @@
         </section>
     </div>
 
-    <!-- PIE DE PÁGINA -->
     <footer class="text-center p-4 text-gray-600 dark:text-gray-400 mt-8">
         © 2025 Meayck Rudloff Paredes Gutierrez - Todos los derechos reservados.
     </footer>
 
     <script>
-        // Detectar la preferencia del usuario para el modo oscuro
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.classList.add("dark");
         }
