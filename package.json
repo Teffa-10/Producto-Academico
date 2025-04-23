@@ -1,0 +1,21 @@
+{
+  "name": "producto-academico",
+  "version": "1.0.0",
+  "description": "Blog de un estudiante de Ingenieria de Sistemas",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.6"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "author": "Meayck Rudloff Paredes Gutierrez",
+  "license": "MIT"
+}
