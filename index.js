@@ -45,6 +45,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/data', express.static('data'));
+app.use('/assets', express.static('assets'));
 
 // Exportaciones para pruebas
 module.exports = { app, initDB, sequelize, Image };
