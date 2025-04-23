@@ -117,25 +117,32 @@
     </footer>
 
     <script>
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add("dark");
-        }
-
-        // Cargar imágenes desde el archivo JSON
-        fetch('/data/images.json')
-            .then(response => response.json())
-            .then(data => {
-                const gallery = document.getElementById('image-gallery');
-                gallery.innerHTML = ''; // Limpia el contenedor antes de agregar imágenes
-                data.images.forEach(imagePath => {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = imagePath;
-                    imgElement.alt = "Imagen de la galería";
-                    imgElement.className = "rounded-lg shadow-lg hover:shadow-xl transition";
-                    gallery.appendChild(imgElement);
+        document.addEventListener("DOMContentLoaded", () => {
+            const gallery = document.getElementById('image-gallery');
+            gallery.innerHTML = "<p class='text-center col-span-3'>🔄 Cargando imágenes...</p>";
+    
+            fetch('/data/images.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("No se pudo cargar el JSON");
+                    return response.json();
+                })
+                .then(data => {
+                    gallery.innerHTML = '';
+                    data.images.forEach(imagePath => {
+                        const img = document.createElement('img');
+                        img.src = imagePath;
+                        img.alt = "Imagen de la galería";
+                        img.loading = "lazy";
+                        img.className = "rounded-lg shadow-lg hover:shadow-xl transition";
+                        gallery.appendChild(img);
+                    });
+                })
+                .catch(error => {
+                    gallery.innerHTML = "<p class='text-red-500'>⚠️ Error al cargar las imágenes.</p>";
+                    console.error("Error:", error);
                 });
-            })
-            .catch(error => console.error('Error al cargar las imágenes:', error));
+        });
     </script>
+    
 </body>
 </html>

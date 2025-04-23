@@ -44,7 +44,8 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.use('/data', express.static('data'));
+//app.use('/data', express.static('data'));
+app.use('/data', express.static('_data')); // ✅ Ahora sí sirve "_data/images.json"
 app.use('/assets', express.static('assets'));
 
 // Exportaciones para pruebas
