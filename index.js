@@ -44,6 +44,8 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.use('/data', express.static('data'));
+
 // Exportaciones para pruebas
 module.exports = { app, initDB, sequelize, Image };
 
