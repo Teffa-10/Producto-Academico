@@ -132,7 +132,8 @@
                     data.images.forEach(imagePath => {
                         const img = document.createElement('img');
                         // 👇 Añadimos el prefijo base del repositorio
-                        img.src = "https://teffa-10.github.io/Producto-Academico/" + imagePath;
+                        //img.src = "https://teffa-10.github.io/Producto-Academico/" + imagePath;
+                        img.src = imagePath;
                         img.alt = "Imagen de la galería";
                         img.loading = "lazy";
                         img.className = "rounded-lg shadow-lg hover:shadow-xl transition";
