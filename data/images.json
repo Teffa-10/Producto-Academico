@@ -1,7 +1,7 @@
 {
   "images": [
-    "/Producto-Academico/assets/images/htb-crocodile/answer-0.png",
-    "/Producto-Academico/assets/images/htb-crocodile/answer-1.png",
-    "/Producto-Academico/assets/images/htb-crocodile/answer-2.png"
+    "assets/images/htb-crocodile/answer-0.png",
+    "assets/images/htb-crocodile/answer-1.png",
+    "assets/images/htb-crocodile/answer-2.png"
   ]
 }
