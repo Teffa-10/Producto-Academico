@@ -121,7 +121,8 @@
             const gallery = document.getElementById('image-gallery');
             gallery.innerHTML = "<p class='text-center col-span-3'>🔄 Cargando imágenes...</p>";
     
-            fetch('/data/images.json')
+            // ✅ sin "/" inicial para que funcione correctamente en GitHub Pages
+            fetch("data/images.json")
                 .then(response => {
                     if (!response.ok) throw new Error("No se pudo cargar el JSON");
                     return response.json();
@@ -130,7 +131,8 @@
                     gallery.innerHTML = '';
                     data.images.forEach(imagePath => {
                         const img = document.createElement('img');
-                        img.src = imagePath;
+                        // 👇 Añadimos el prefijo base del repositorio
+                        img.src = "https://teffa-10.github.io/Producto-Academico/" + imagePath;
                         img.alt = "Imagen de la galería";
                         img.loading = "lazy";
                         img.className = "rounded-lg shadow-lg hover:shadow-xl transition";
@@ -143,6 +145,7 @@
                 });
         });
     </script>
+    
     
 </body>
 </html>
