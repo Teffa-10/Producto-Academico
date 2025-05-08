@@ -14,10 +14,15 @@
     "supertest": "^6.1.6"
   },
   "devDependencies": {
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "jest-junit": "^15.0.0"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "/_site/"]
+    "testPathIgnorePatterns": ["/node_modules/", "/_site/"],
+    "reporters": [
+      "default",
+      ["jest-junit", { "outputDirectory": "./reports", "outputName": "jest-results.xml" }]
+    ]
   },
   "author": "Meayck Rudloff Paredes Gutierrez",
   "license": "MIT"
