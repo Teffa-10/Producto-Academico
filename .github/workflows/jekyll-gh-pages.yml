@@ -42,7 +42,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
       # Test Reporter
-      - name: Run Tests
+      - name: Run ci
+        run: npm ci
+      - name: Run Jest Tests
         run: npm test
 
       - name: Test Reporter
