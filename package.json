@@ -16,6 +16,9 @@
   "devDependencies": {
     "jest": "^27.0.6"
   },
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "/_site/"]
+  },
   "author": "Meayck Rudloff Paredes Gutierrez",
   "license": "MIT"
 }
