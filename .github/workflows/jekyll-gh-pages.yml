@@ -53,6 +53,14 @@ jobs:
           name: Jest Tests
           path: reports/jest-results.xml
           reporter: jest-junit
+          path-replace-backslashes: false
+          list-suites: all
+          list-tests: all
+          max-annotations: 10
+          fail-on-error: true
+          fail-on-empty: true
+          only-summary: false
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   # Deployment job
   deploy:
